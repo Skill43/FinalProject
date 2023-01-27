@@ -1,8 +1,17 @@
-﻿string[] array = new string[5] {"hello","12","мир", "123", "end"};
+﻿System.Console.WriteLine("Введите количество элементов массива:");
+int n = int.Parse(Console.ReadLine());
+string[] array = new string[n];
 string[] ResArray = new string[array.Length];
+Console.WriteLine("Введите элементы массива: ");
+for (int i = 0;i< n; i++)
+{
+   
+   array[i]= Console.ReadLine();
+}
+System.Console.WriteLine();
 
 System.Console.WriteLine("Вы ввели:");
-for (int i = 0; i < array.Length; i++)
+for (int i = 0; i < n; i++)
 {
         System.Console.Write("|"+ array[i]);
 }
