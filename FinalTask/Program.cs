@@ -1,5 +1,21 @@
-﻿System.Console.WriteLine("Введите количество элементов массива:");
-int n = int.Parse(Console.ReadLine());
+﻿Console.Clear();
+int InputNumber(string str)
+{
+    int number;
+    string text;
+    while (true)
+    {
+        System.Console.Write(str);
+        text = Console.ReadLine();
+        if (int.TryParse(text, out number))
+        {
+            break;
+        }
+        System.Console.WriteLine("Не удалось распознать число, попробуйте еще раз.");
+    }
+    return number;
+}
+int n = InputNumber("Введите количество элементов массива:");
 string[] array = new string[n];
 string[] ResArray = new string[array.Length];
 Console.WriteLine("Введите элементы массива: ");
